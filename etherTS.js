@@ -3,14 +3,15 @@ const { ethers } = require("ethers");
 async function transfer ()  
 
 {
-const sender_pvt_key = "sender key";
-const receiver_address = "receiver key";
-const amount = ".1";
+  const sender_pvt_key = "xx";
+  const receiver_address = "xx";
+  const amount = "05";
+  
 
-let provider = new ethers.InfuraProvider("goerli")
+let provider = new ethers.InfuraProvider("goerli");
 console.log(provider);
 
-let sender_wallet = new ethers.Wallet(sender_pvt_key, "provider");
+let sender_wallet = new ethers.Wallet(sender_pvt_key, provider);
 console.log(sender_wallet.address);
 
 const signer = new ethers.Wallet(sender_pvt_key, provider);

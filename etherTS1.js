@@ -3,11 +3,12 @@ const { ethers } = require("ethers");
 async function transfer ()  
 
 {
-const sender_pvt_key = "sender key";
-const receiver_address = "receiver key";
-const amount = ".1";
+const sender_pvt_key = "xx";
+const receiver_address = "xx";
+const amount = ".05";
 
 let provider = new ethers.InfuraProvider("goerli")
+//let provider = ethers.getDefaultProvider(5)
 console.log(provider);
 
 let sender_wallet = new ethers.Wallet(sender_pvt_key, "provider");
@@ -29,6 +30,5 @@ console.log("Mining transaction...");
 const receipt = await tx.wait();
 console.log(tx);
 }
-
 
 transfer()
